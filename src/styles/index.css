@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.dashboard-list {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  background-color: #f0f0f0; 
+}
+
+.dashboard-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  max-width: 400px;
+  width: 100%;
+  transition: max-height 0.3s, padding 0.3s;
+  cursor: pointer;
+}
+
+.dashboard-card h3 {
+  margin: 0;
+}
+
+.dashboard-card.expanded {
+  max-height: 100%;
+  padding: 20px;
+}
+
+.dashboard-card.expanded h3 {
+  font-weight: bold;
+}
+
+.dashboard-card.expanded p {
+  margin: 10px 0;
+}
+.dashboard-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+}
+.item-name {
+  font-weight: 500;
+  text-align: left;
+}
+.item-icon {
+  flex-grow: 0;
+  width: 24px;
+  height: 24px;
+  margin: 8px 1em;
+  opacity: 0.89;
+}
+
+.dashboard-items p {
+  margin: 0;
+  font-style: italic;
+}
+
+.item-item {
+  padding: 5px 3px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 1rem 0;
+}
+
