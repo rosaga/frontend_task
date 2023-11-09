@@ -10,8 +10,6 @@ const iconMapping = {
     TEXT: <IconTextBox16 />,
     LINE: <IconVisualizationLine16 />
 
-
-    // Add more mappings for other visualization types as needed
 };
 
 const Dashboard = ({ title, onClick, isExpanded, dashboardItems, onToggleStar, isStarred }) => {
