@@ -43,11 +43,3 @@ export const loadDashboardDetails = async (dashboardURL) => {
 
 }
 
-export const getIconForItemType = (type) => {
-    const iconMappings = {
-      visualization: '',
-      MAP: "material-icons",
-      text: '',
-    };
-    return iconMappings[type] || '';
-  };
