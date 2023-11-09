@@ -1,8 +1,7 @@
-
+//loads the dashboards
 export const loadDashboards = async (dashboardURL) => {
 
     try{
-
         let response = await fetch(
             dashboardURL,{
                 method: 'GET'
@@ -20,7 +19,7 @@ export const loadDashboards = async (dashboardURL) => {
     }
 
 }
-
+//loads dashboard details
 export const loadDashboardDetails = async (dashboardURL) => {
 
     try{
