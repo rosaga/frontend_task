@@ -24,9 +24,7 @@ const Dashboard = ({ title, onClick, isExpanded, dashboardItems, onToggleStar, i
         }
     };
 
-    const handleExpand = (items) => {
-        setExpandedDashboardItems(items);
-    };
+
 
     const handleToggleStar = () => {
         if (onToggleStar) {
@@ -72,7 +70,7 @@ const Dashboard = ({ title, onClick, isExpanded, dashboardItems, onToggleStar, i
                         }
 
                         return (
-                            <div className='item-item' key={item.id} onClick={() => handleExpand(item)}>
+                            <div className='item-item' key={item.id} >
                                 <div className="item-icon">{iconComponent}</div>
                                 <div className="item-details">
                                     <span className="item-name">{itemName}</span>
