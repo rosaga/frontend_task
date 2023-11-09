@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { getIconForItemType } from '../utils/function';
 import { IconVisualizationPie16, IconVisualizationBar16, IconTable16, IconVisualizationColumnStacked16, IconWorld16, IconTextBox16, IconVisualizationLine16, IconStarFilled16, IconStar16, IconChevronDown24, IconChevronUp24 } from '@dhis2/ui-icons'
 
 const iconMapping = {
@@ -15,7 +14,7 @@ const iconMapping = {
     // Add more mappings for other visualization types as needed
 };
 
-const Dashboard = ({ title, details, onClick, isExpanded, dashboardItems, onToggleStar, isStarred }) => {
+const Dashboard = ({ title, onClick, isExpanded, dashboardItems, onToggleStar, isStarred }) => {
 
     const [expandedDashboardItems, setExpandedDashboardItems] = useState(null);
 
