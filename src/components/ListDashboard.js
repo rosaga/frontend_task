@@ -8,7 +8,7 @@ const ListDashboard = ({ dashboards }) => {
     const [dashboardDetails, setDashboardDetails] = useState([]);
     const [expandedDashboards, setExpandedDashboards] = useState({});
     const [starredDashboards, setStarredDashboards] = useState({});
-    const [selectedFilter, setSelectedFilter] = useState(''); // Add selected filter state
+    const [selectedFilter, setSelectedFilter] = useState(''); 
 
 
 
@@ -22,6 +22,7 @@ const ListDashboard = ({ dashboards }) => {
         }));
 
     };
+    //check if the dashboard is expanded when a user clicks on it.
     const isDashboardExpanded = (id) => expandedDashboards[id] || false;
 
     const getDashboardDetails = async () => {
@@ -43,6 +44,7 @@ const ListDashboard = ({ dashboards }) => {
         localStorage.setItem('starredDashboards', JSON.stringify(updatedStarred));
     };
 
+        //handle filtering of dashboard items
     const filterDashboardItems = () => {
         if (!selectedFilter) {
             return dashboardDetails.dashboardItems;
@@ -61,13 +63,13 @@ const ListDashboard = ({ dashboards }) => {
         const storedStarred = JSON.parse(localStorage.getItem('starredDashboards')) || {};
         setStarredDashboards(storedStarred);
     }, []);
-
     return (
         <div className="dashboard-listz" style={{display: 'flex', flexDirection: 'column', width: '100%'}}>
             <div>
                 <select
                     value={selectedFilter}
                     onChange={(e) => setSelectedFilter(e.target.value)}
+                    disabled = {dashboardId ? false : true} //only enable filtering if a dashboard is selected
                 >
                     <option value="">All</option>
                     <option value="VISUALIZATION">Visualizations</option>
