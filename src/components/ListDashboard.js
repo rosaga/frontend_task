@@ -3,8 +3,10 @@ import Dashboard from './Dashboard';
 import { loadDashboardDetails } from '../utils/function';
 
 const ListDashboard = ({ dashboards }) => {
-    const [dashboardId, setDashboardId] = useState('nghVC4wtyzi');
-    const [dashboardUrl, setDashboardUrl] = useState('https://gist.githubusercontent.com/kabaros/da79636249e10a7c991a4638205b1726/raw/fa044f54e7a5493b06bb51da40ecc3a9cb4cd3a5/nghVC4wtyzi.json');
+    const baseUrl = 'https://gist.githubusercontent.com/kabaros/da79636249e10a7c991a4638205b1726/raw/fa044f54e7a5493b06bb51da40ecc3a9cb4cd3a5/'
+    const defaultDashboardId = dashboards.length > 0 ? dashboards[0].id : 'nghVC4wtyzi';
+    const [dashboardId, setDashboardId] = useState(defaultDashboardId);
+    const [dashboardUrl, setDashboardUrl] = useState(baseUrl+defaultDashboardId+'.json');
     const [dashboardDetails, setDashboardDetails] = useState([]);
     const [expandedDashboards, setExpandedDashboards] = useState({});
     const [starredDashboards, setStarredDashboards] = useState({});
