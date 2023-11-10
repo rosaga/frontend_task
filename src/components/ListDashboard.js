@@ -3,8 +3,8 @@ import Dashboard from './Dashboard';
 import { loadDashboardDetails } from '../utils/function';
 
 const ListDashboard = ({ dashboards }) => {
-    const [dashboardId, setDashboardId] = useState(dashboards?.length > 0 ? dashboards[0]?.id : '');
-    const [dashboardUrl, setDashboardUrl] = useState('');
+    const [dashboardId, setDashboardId] = useState('nghVC4wtyzi');
+    const [dashboardUrl, setDashboardUrl] = useState('https://gist.githubusercontent.com/kabaros/da79636249e10a7c991a4638205b1726/raw/fa044f54e7a5493b06bb51da40ecc3a9cb4cd3a5/nghVC4wtyzi.json');
     const [dashboardDetails, setDashboardDetails] = useState([]);
     const [expandedDashboards, setExpandedDashboards] = useState({});
     const [starredDashboards, setStarredDashboards] = useState({});
@@ -52,24 +52,26 @@ const ListDashboard = ({ dashboards }) => {
         return dashboardDetails.dashboardItems.filter((item) => item.type === selectedFilter);
     }
 
-    useEffect(() => {
-        if (dashboardId) {
-            getDashboardDetails();
-        }
-    }, [dashboardId]);
 
     useEffect(() => {
+        //Loads the dashboard items
+        getDashboardDetails();
         // Load starred states from localStorage on component mount
         const storedStarred = JSON.parse(localStorage.getItem('starredDashboards')) || {};
         setStarredDashboards(storedStarred);
-    }, []);
+        //Expands the first dashboard on initial load.
+        setExpandedDashboards({
+            [dashboardId]: true,
+    });
+    }, [dashboardId]);
+
+
     return (
         <div className="dashboard-listz" style={{display: 'flex', flexDirection: 'column', width: '100%'}}>
             <div>
                 <select
                     value={selectedFilter}
                     onChange={(e) => setSelectedFilter(e.target.value)}
-                    disabled = {dashboardId ? false : true} //only enable filtering if a dashboard is selected
                 >
                     <option value="">All</option>
                     <option value="VISUALIZATION">Visualizations</option>
