@@ -1,10 +1,38 @@
-# Getting Started with Create React App
+# Front End Dashboard Task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React project application that fetches and renders the list of dashboards available to a DHIS2 user.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Deployment
+
+The project is deployed and accessible at [Dashboard App](https://frontend-task-two-pi.vercel.app/).
+
+
+## Overview
+
+This application offers a dashboard view to manage and visualize data from an API
+
+## Getting Started
+
+To run the application locally, follow these steps:
+
+   * Clone the repository.
+   * Navigate to the project directory.
+   * Install dependencies using yarn install.   
+   * Start the application with yarn start.
+
+## Major Decisions
+
+    * **Tech Stack**: The project utilizes React for the front-end, enabling a modular, reusable, and responsive user interface.
+    * **Data Management**: Data loading and manipulation are handled through API calls and custom utility functions. Mock data is used in the test environment to simulate API behavior.
+    * **Testing**: The test suite includes unit tests for utility functions and integration tests for UI components. It employs Jest and React Testing Library for comprehensive coverage.
+    * **Component Structure**: The dashboard system is composed of modular components, allowing scalability and easy maintenance.
+
+
+
+
+
+
 
 ### `npm start`
 
