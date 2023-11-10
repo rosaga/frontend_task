@@ -6,7 +6,7 @@ This is a React project application that fetches and renders the list of dashboa
 
 This application offers a dashboard view to manage and visualize data from an API for DHIS2 users. The users are able to filter through the diffrent dashboards and mark them as favorites using stars. 
 
-[Screenshot](./public/screenshot.png?raw=true "ScreenShot")
+![Screenshot](https://github.com/rosaga/frontend_task/blob/main/public/screenshot.png?raw=true "Optional Title")
 
 ## Deployment
 
