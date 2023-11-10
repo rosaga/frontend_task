@@ -22,7 +22,7 @@ To run the application locally, follow these steps:
    * Start the application with `yarn start`.
 
 
-## Major Decisions
+## Project Structure
 
 * **Technology  Stack**: The project utilizes React for the front-end, which enables a modular, reusable, and responsive user interface.
 * **Data Management**: Data loading and manipulation are handled through API calls and custom utility functions. Mock data is used in the test environment to simulate API behavior.
